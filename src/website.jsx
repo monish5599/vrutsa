@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./website.css";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
+
 
 export default function Website() {
   return (
@@ -28,11 +29,11 @@ function Hero() {
   return (
     <section
       className="hero"
-      style={{ backgroundImage: "url(/assets/hero-bg.png)" }}
+      style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/hero_bg.png)` }}
     >
       <header className="hero-header">
         <div className="logo-area">
-          <img src="/assets/logo.png" alt="Vrutsa Solutions" />
+          <img src={`${process.env.PUBLIC_URL}/assets/logo.png`} alt="Vrutsa Solutions" />
           <span>VRUTSA</span>
         </div>
 
@@ -71,32 +72,32 @@ function FocusAreas() {
 
   const individualData = [
     {
-      img: "/assets/Career guidance & growth.png",
+      img: `${process.env.PUBLIC_URL}/assets/Career_guidance_growth.png`,
       title: "Career Guidance",
       desc: "Helping you build skills, confidence, and clear goals for a better future.",
     },
     {
-      img: "/assets/Business Growth.jpg",
+      img: `${process.env.PUBLIC_URL}/assets/Business_Growth.jpg`,
       title: "Business Growth",
       desc: "Strategic guidance to scale operations, improve performance, and increase profitability.",
     },
     {
-      img: "/assets/Personal brand & online presence.png",
+      img: `${process.env.PUBLIC_URL}/assets/Personal_brand_online_presence.png`,
       title: "Personal brand & online presence",
       desc: "Build a strong identity and grow your visibility across digital platforms.",
     },
     {
-      img: "/assets/Education & abroad guidance.jpg",
+      img: `${process.env.PUBLIC_URL}/assets/Education_abroad_guidance.jpg`,
       title: "Education & abroad guidance",
       desc: "Clear support for choosing the right courses, universities, and study destinations abroad.",
     },
     {
-      img: "/assets/Investment opportunities.png",
+      img: `${process.env.PUBLIC_URL}/assets/Investment_opportunities.png`,
       title: "Investment opportunities",
       desc: "Identify smart investment options to grow and secure your financial future.",
     },
     {
-      img: "/assets/Tech guidance (tools & automation).png",
+      img: `${process.env.PUBLIC_URL}/assets/Tech_guidance.png`,
       title: "Tech guidance (tools & automation)",
       desc: "Helping you choose the right tools and automate processes for better efficiency.",
     },
@@ -104,32 +105,33 @@ function FocusAreas() {
 
   const enterpriseData = [
     {
-      img: "/assets/Business growth challenges.png",
+      img: `${process.env.PUBLIC_URL}/assets/Business_growth_challenges.png`,
       title: "Business growth challenges",
       desc: "Practical solutions to overcome obstacles and sustain long-term business growth.",
     },
     {
-      img: "/assets/Operational issues.avif",
+      img: `${process.env.PUBLIC_URL}/assets/Operational_issues.avif`,
       title: "Operational issues",
       desc: "Identifying and resolving process gaps to improve efficiency and daily operations.",
     },
     {
-      img: "/assets/Technology & digital gaps.avif",
+      img: `${process.env.PUBLIC_URL}/assets/Technology_digital_gaps.avif`,
       title: "Technology & digital gaps",
       desc: "Bridging skill and system gaps to improve digital adoption and performance.",
     },
     {
-      img: "/assets/Funding & investor readiness.png",
+      img: `${process.env.PUBLIC_URL}/assets/Funding_investor_readiness.png`,
       title: "Funding & investor readiness",
       desc: "Preparing your business to attract funding and confidently engage with investors.",
     },
     {
-      img: "/assets/Market entry & expansion.png",
+      img: `${process.env.PUBLIC_URL}/assets/Market_entry_expansion.png`,
       title: "Market entry & expansion",
       desc: "Strategic support to launch into new markets and scale your business confidently.",
     },
     {
-      img: "/assets/Process automation & improvement.png",
+      img: `${process.env.PUBLIC_URL}/assets/Process_automation_
+      improvement.png`,
       title: "Process automation & improvement",
       desc: "Streamlining workflows through automation to boost efficiency and reduce costs.",
     },
@@ -264,7 +266,7 @@ function About() {
 
         {/* CARD 1 */}
         <div className="why-card">
-          <img src="/assets/outcome.png" alt="Outcome driven" />
+          <img src={`${process.env.PUBLIC_URL}/assets/outcome.png`} alt="Outcome" />
           <div>
             <h4>Outcome-driven approach</h4>
             <p>
@@ -284,12 +286,12 @@ function About() {
               increase speed, and improve reliability.
             </p>
           </div>
-          <img src="/assets/saas.png" alt="SaaS model" />
+          <img src={`${process.env.PUBLIC_URL}/assets/saas.png`} alt="SaaS model" />
         </div>
 
         {/* CARD 3 */}
         <div className="why-card">
-          <img src="/assets/industry.png" alt="Industry agnostic" />
+          <img src={`${process.env.PUBLIC_URL}/assets/industry.png`} alt="Industry agnostic" />
           <div>
             <h4>Industry-agnostic expertise</h4>
             <p>
@@ -308,7 +310,7 @@ function About() {
               structured workflows to protect client data.
             </p>
           </div>
-          <img src="/assets/confidential.png" alt="Confidential" />
+          <img src={`${process.env.PUBLIC_URL}/assets/confidential.png`} alt="Confidential" />
         </div>
       </section>
     </section>
@@ -333,7 +335,7 @@ function Footer() {
             <div className="social">
               <span>Social Links</span>
               <div className="icons">
-                <a href="https://www.linkedin.com/company/vrutsa-solutions/posts/?feedView=all" aria-label="LinkedIn" target="_blank">in</a>
+                <a href="https://www.linkedin.com/company/vrutsa-solutions/posts/?feedView=all" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
                 
               </div>
             </div>
@@ -343,13 +345,14 @@ function Footer() {
           <div className="footer-right">
             <div className="contact-block">
               <h4>Contact</h4>
-              <p>+91 1234567890</p>
-              <p>vrutsasolutions@gmail.com</p>
+              <p><a href="callto:+91-9994586462">+91-9994586462</a></p>
+              <p ><a href="mailto:vrutsasolutions@gmail.com" target="_blank">vrutsasolutions@gmail.com</a></p>
             </div>
 
             <div className="contact-block">
               <h4>Address</h4>
-              <p>Koyambedu, Chennai-600000</p>
+              <p>Company Address: I-406,</p>
+                <p> Amarprakash Temple Waves, PKV Mahanagar Road Extn, </p><p>Tiruneermalai Road, Kundrathur, Chennai-69.</p>
             </div>
           </div>
         </div>

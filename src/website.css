@@ -779,6 +779,20 @@ textarea {
     text-decoration: underline;
 }
 
+/* ================= FOOTER LINK COLOR ================= */
+.footer a {
+    color: #ffffff;
+    /* white */
+    text-decoration: none;
+    /* remove underline */
+    font-weight: 500;
+}
+
+.footer a:hover {
+    color: #dbeafe;
+    /* light blue on hover */
+    text-decoration: underline;
+}
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .footer-container {
@@ -788,5 +802,116 @@ textarea {
 
     .footer-right {
         text-align: center;
+    }
+}
+
+/* ================= GLOBAL FIX ================= */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    section {
+        padding: 40px 16px;
+    }
+
+    /* ---------- HEADER ---------- */
+    .hero-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .cta-btn {
+        width: 100%;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+        min-height: auto;
+        padding: 120px 16px 60px;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .hero-content h1 {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    /* ---------- FOCUS AREAS ---------- */
+    .focus-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .focus-card {
+        padding: 16px;
+    }
+
+    /* ---------- SERVICES ---------- */
+    .servicesGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* ---------- ABOUT ---------- */
+    .why-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .why-card img {
+        width: 120px;
+        margin: 0 auto;
+    }
+
+    /* ---------- CONTACT ---------- */
+    .form-box {
+        padding: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
     }
 }
