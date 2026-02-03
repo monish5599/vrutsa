@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/vrutsa/static/css/main.aaa0051f.css",
-    "main.js": "/vrutsa/static/js/main.65467748.js",
+    "main.js": "/vrutsa/static/js/main.46834179.js",
     "index.html": "/vrutsa/index.html",
     "main.aaa0051f.css.map": "/vrutsa/static/css/main.aaa0051f.css.map",
-    "main.65467748.js.map": "/vrutsa/static/js/main.65467748.js.map"
+    "main.46834179.js.map": "/vrutsa/static/js/main.46834179.js.map"
   },
   "entrypoints": [
     "static/css/main.aaa0051f.css",
-    "static/js/main.65467748.js"
+    "static/js/main.46834179.js"
   ]
 }
